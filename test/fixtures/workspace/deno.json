@@ -1,0 +1,4 @@
+{
+  "workspace": ["./packages/api", "./packages/web"],
+  "imports": { "@std/assert": "jsr:@std/assert@^1.0.8" }
+}

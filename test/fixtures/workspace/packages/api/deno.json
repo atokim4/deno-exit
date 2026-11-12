@@ -1,0 +1,6 @@
+{
+  "name": "@sample/api",
+  "exports": "./mod.ts",
+  "tasks": { "dev": "deno run -A --watch mod.ts" },
+  "imports": { "@std/dotenv": "jsr:@std/dotenv@^0.225.2" }
+}

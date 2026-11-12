@@ -1,0 +1,44 @@
+{
+  "name": "deno-exit",
+  "version": "0.1.0",
+  "description": "Move a Deno / Deno Deploy / Val Town project to Node (or plan the move to Bun or Cloudflare Workers): lists Deno ties with file:line, rewrites the mechanical parts for Node, lists the decisions (KV, cron, Fresh).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atokim4/deno-exit.git"
+  },
+  "author": "Sunnatulla E",
+  "type": "module",
+  "bin": {
+    "deno-exit": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "npm run build && vitest run",
+    "prepare": "npm run build"
+  },
+  "keywords": ["deno", "deno-deploy", "val-town", "node", "migration", "codemod", "cli"],
+  "dependencies": {
+    "jsonc-parser": "3.3.1",
+    "ts-morph": "28.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.14.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2",
+    "vitest": "5.1.0"
+  },
+  "overrides": {
+    "minimatch": "11.0.8"
+  }
+}
